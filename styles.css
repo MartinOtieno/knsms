@@ -1,0 +1,96 @@
+body {
+    font-family: Arial, sans-serif;
+    
+    line-height: 1.6;
+}
+a {
+    color: #f58a1f;
+    text-decoration: none;
+}
+
+/* Site header */
+.site-header {
+    background-color: #f58a1f;
+    padding: 2rem;
+   
+  top: 0px;
+}
+.main-nav a {
+    color: darkblue;
+font-size: 25px;
+font-weight: 12px;
+
+
+}
+
+/* Hero section */
+#hero {
+    padding: 4rem;
+    text-align: center;
+    background-image: url('07.jpg');
+    background-size: cover;
+font-size: 25px;
+
+  }
+@media (min-width: 768px) {
+  .main-nav a {
+    display: inline-block;
+    margin-right: 1rem;
+  }
+  
+  #hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  #about,
+  #news,
+  #contact {
+    max-width: 50%;
+  }
+}
+@media (min-width: 992px) {
+  .main-nav a {
+    margin-right: 2rem;
+  }
+  
+  #hero {
+    padding: 6rem 3rem;
+  }
+}
+@media (min-width: 1200px) {
+  .main-nav a {
+    margin-right: 3rem;
+  }
+  
+  #hero {
+    padding: 8rem 6rem;
+  }
+}
+
+/* About section */
+#about {
+    padding: 2rem;
+}
+
+/* News section */
+#news {
+    padding: 2rem;
+}
+#news ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+#news li {
+    border-bottom: 1px solid #ddd;
+    padding: 0.5rem 0;
+}
+
+/* Contact section */
+#contact {
+    padding: 2rem;
+   
+}
