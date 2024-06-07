@@ -69,11 +69,22 @@ h2 {
     .action-buttons a {
         margin-right: 5px;
     }
+    h1{
+        font-size: 25px;
+        font-weight: bold;
+        text-decoration: underline;
+    }
+    a.delete {
+    background-color: #dc3545;
+    color: #fff;
+    padding: 8px;
+    border-radius: 5px;
+}
 </style>
-<div class="wrapper pizza-index">
+<div class="wrapper pizza-index" style="margin-top: 80px">
 <form action="show">
-    <img src="/images/kibulogo.png" alt="logo" style="width: 60px; margin-left:600px;">
-<h1>The Donors List</h1>
+    <img src="/images/kibulogo.png" alt="logo" style="width: 60px; margin-left:530px;">
+<h1>The Donors List.</h1>
 <table class="table">
         <thead>
             <tr>
@@ -88,18 +99,17 @@ h2 {
         </thead>
         <tbody>
             @php
-                $counter = 1; // Initialize counter variable
+                $counter = 1;
             @endphp
             @foreach($donors as $donor)
             <tr>
-                <td>{{ $counter++ }}</td> <!-- Display and increment the counter -->
+                <td>{{ $counter++ }}</td>
                 <td><a href="/donors/{{ $donor->id }}">{{ $donor->donor_id }}</a></td>
                 <td>{{ $donor->first_name }}</td>
                 <td>{{ $donor->last_name }}</td>
                 {{-- <td>{{ $donor->donated_amount }}</td> --}}
                 <td>{{ $donor->donated_date }}</td>
-                <td><a href="/donors/{{ $donor->id }}" class="btn btn-primary">View Details</a></td> <!-- Button for viewing details -->
-                <!-- Add more table cells for other data -->
+                <td><a href="/donors/{id}" class="btn btn-primary">View</a>|<a href="{{url('/donors/'.$donor->id)}}" class="delete">Delete</a></td>
             </tr>
             @endforeach
         </tbody>

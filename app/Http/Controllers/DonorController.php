@@ -44,14 +44,20 @@ class DonorController extends Controller
         $donor ->city = request('city');
         $donor ->national_id = request('national_id');
         $donor ->company = request('company');
-        $donor ->donated_amount = request('donated_amount');
+        // $donor ->donated_amount = request('donated_amount');
         $donor ->donated_date = request('donated_date');
         $donor ->nationality = request('nationality');
         $donor ->occupation = request('occupation');
 
         $donor->save();
          
-        return redirect('/')->with('mssg', 'Thanks for your contribution!');
+        return redirect(route('sponsor.dashboard'))->with('mssg', 'Thanks for your contribution!');
+    }
+    public function deleteDonor($id)
+    {
+        Donor::where('id','=',$id)->delete();
+        return redirect('/donors')->with('mssg', 'Donor deleted Successfully!');
+
     }
 
 }

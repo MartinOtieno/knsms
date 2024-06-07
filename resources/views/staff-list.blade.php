@@ -1,11 +1,5 @@
 <x-app-layout>
 <style>
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f0f0f0;
-}
 .container {
     width: 80%;
     margin: 0 auto;
@@ -22,6 +16,8 @@ h2 {
     padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
+    /* float:right; */
+    /* margin-left:1000px; */
 }
 .table {
     width: 100%;
@@ -68,7 +64,7 @@ h2 {
 <body>
     {{-- <button onclick="window.location.href='http://localhost/knsms2024/mpesa.php'" id="clearButton" style="margin-left: 250px">Deposit Now</button><br> --}}
     <div class="staffs-list">
-        <h2 class="center">Staff List</h2>
+        <h2 class="center" style="font-size: 35px; color:#000; text-decoration:underline;">Staff List.</h2>
         <form action="{{url('search')}}" method="get">
             <div>
                 <input type="search" name="search" placeholder="Search Staff">

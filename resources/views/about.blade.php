@@ -2,93 +2,64 @@
 
 @section('content')
 <style>
-  body {
-            font-family: Arial, sans-serif;
-            background-color: #f8f9fa;
-            margin: 0;
-            padding: 0;
-        }
-
-        /* Container styles */
-        .container {
-            /* max-width: 860px; */
-            margin: 0 auto;
-            /* padding: 20px; */
-        }
-
-        /* Section title styles */
-        .section-title {
-            text-align: center;
-            /* margin-bottom: 30px; */
-            margin-top: 40px
-        }
-
-        .section-title h2 {
-            color: #333;
-            font-size: 36px;
-            margin: 0;
-        }
-
-        /* Content styles */
-        .content {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-items: center;
-            /* margin-bottom: 50px; */
-        }
-
-        .content p {
-            color: #666;
-            /* line-height: 1.6; */
-        }
-
-        .content ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-            color: #666;
-        }
-
-        .content ul li {
-            position: relative;
-            /* padding-left: 20px; */
-            /* margin-bottom: 10px; */
-        }
-
-        .content ul li:before {
-            content: "\2022";
-            position: absolute;
-            left: 0;
-            color: #007bff;
-        }
-
-        /* Button styles */
-        .btn-learn-more {
-            display: inline-block;
-            background-color: #666;
-            color: #fff;
-            text-decoration: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-            margin-bottom: 20px;
-        }
-
-        .btn-learn-more:hover {
-            background-color: #0056b3;
-        }
-        .col-lg-6{
-          margin-left: 100px;
-          margin-right: 100px;
-          /* background-color: #0056b3 */
-          width: 400px:
-          align-content: center;
-          align-items: center;
-          justify-items: center;
-          justify-content: center;
-          /* text-align: center; */
-        }
+.container {
+    margin: 0 auto;
+}
+.section-title {
+    text-align: center;
+    margin-top: 100px
+}
+.section-title h2 {
+    color: #333;
+    font-size: 36px;
+    margin: 0;
+}
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.content p {
+    color: #666;
+}
+.content ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    color: #666;
+}
+.content ul li {
+    position: relative;
+}
+.content ul li:before {
+    content: "\2022";
+    position: absolute;
+    left: 0;
+    color: #007bff;
+}
+.btn-learn-more {
+    display: inline-block;
+    background-color: #666;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin-bottom: 20px;
+}
+.btn-learn-more:hover {
+    background-color: #0056b3;
+}
+.col-lg-6{
+  margin-left: 100px;
+  margin-right: 100px;
+  width: 400px:
+  align-content: center;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+}
 </style>
 <link rel="stylesheet" href="main.css">
   </header>

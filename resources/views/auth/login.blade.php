@@ -1,11 +1,6 @@
 <x-guest-layout>
 
     <style>
-        /* .container {
-            display: flex;
-            flex-direction: column;
-            height: auto;
-        } */
         .header {
             display: flex;
             justify-content: space-between;
@@ -19,21 +14,12 @@
         h2.logo {
             margin: 0 auto;
         }
-        /* form {
-            width: 100%;
-            max-width: 500px;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            background-color: #f9f9f9;
-        } */
         form > div {
             margin-bottom: 1rem;
         }
         h2{
             text-align: center;
         }
-
     </style>
 
     <!-- Session Status -->
@@ -67,7 +53,6 @@
     
                 <x-input-error :messages="$errors->get('password')" class="mt-2" />
             </div>
-    
             <!-- Remember Me -->
             <div class="block mt-4">
                 <label for="remember_me" class="inline-flex items-center">
@@ -75,7 +60,6 @@
                     <span class="ms-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
                 </label>
             </div>
-    
             <div class="flex items-center justify-end mt-4">
     
                 <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('register') }}" style="margin-right: 20px">
@@ -86,7 +70,6 @@
                         {{ __('Forgot your password?') }}
                     </a>
                 @endif
-    
                 <x-primary-button class="ms-3">
                     {{ __('Log in') }}
                 </x-primary-button>

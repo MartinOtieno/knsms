@@ -5,21 +5,18 @@
         <form action="/donors" method="POST" class="donation-form">
             @csrf
         <img src="/images/kibulogo.png" alt="logo" class="logo-form">
-        <h1>Please fill this Form</h1>
+        <h1 style="align-content: center; font-size:30px; text-docoration:underline; padding:20px;">Contribution Form</h1><hr>
         <fieldset class="donor-details">
-        
         <label for="name">First name:</label>
         <input type="text" id="first_name" name="first_name" required class="required">
-        <label for="name">Middle name:</label>
+        <label for="name">Middle Name:</label>
         <input type="text" id="middle_name" name="middle_name">
-        <label for="name">Last name:</label>
+        <label for="name">Last Name:</label>
         <input type="text" id="last_name" name="last_name" required class="required"><br>
-        <label for="name">Your donor id:</label>
+        <label for="name">Your Donor Id:</label>
         <input type="text" id="donor_id" name="donor_id" required class="required"  style="margin-right: 50px;">
-        <label for="gender">Select your gender:</label>
-        {{-- <input type="radio" id="male" style="margin-left: 10px;" value="male"> --}}
-       {{-- <label for="gender" style=" margin-right:5px;">Select Gender:</label> --}}
-            <input type="radio" id="male" name="gender" value="male">
+        <label for="gender">Select Gender:</label>
+        <input type="radio" id="male" name="gender" value="male">
             <label for="male" style="margin-right: 10px;">Male</label>
             <input type="radio" id="female" name="gender" value="female">
             <label for="female" style="margin-right: 10px;">Female</label>
@@ -27,30 +24,27 @@
             <label for="other" style="margin-right: 10px;">Others</label><br>
         <label for="email" >Email:</label>
         <input type="email" id="email" name="email" required class="required">
-        <label for="phone">Enter phone number:</label>
+        <label for="phone">Enter Phone Number:</label>
         <input type="tel" id="phone" name="phone_no" pattern="(07|01)\d{8}" minlength="10" maxlength="10" placeholder="07XXXXXXXX or 01XXXXXXXX" required class="required">
-        <label for="address">Enter your Postal Address:</label>
+        <label for="address">Enter Postal Address:</label>
         <textarea id="address" name="address" rows="1" cols="20" placeholder="P.O Box 0123-12345" required class="required"></textarea><br>
-        <label for="accountNumber">Enter your city:</label>
+        <label for="accountNumber">Enter City:</label>
         <input type="text" id="city" name="city" placeholder="Nairobi-Kenya" required class="required">
         <label for="nationality">Nationality:</label>
         <input type="text" id="nationality" name="nationality" required class="required">
         <label for="nationality">Enter National Id:</label>
         <input type="number" id="national_id" name="national_id" required class="required"><br>
-        <label for="donated_amount">Your Occupation:</label>
+        <label for="occupation">Your Occupation:</label>
         <input type="text" id="occupation" name="occupation">
         <label for="company">Place of Employment:</label>
-        <input type="text" id="company" name="company"><br>
-        <label for="donated_date">Enter Date of donation:</label>
-        <input type="date" id="donated_date" name="donated_date" required class="required">
+        <input type="text" id="company" name="company">
+        <label for="donated_date">Enter Date of Donation:</label>
+        <input type="date" id="donated_date" name="donated_date" required class="required"><br>
         <label for="donated_amount">Enter the Amount:</label>
-        <input type="number" id="donated_amount" name="donated_amount" required class="required">
-        {{-- <input type="number" id="donated_amount" name="donated_amount" required class="required"> --}}
-        
+        <button onclick="window.location.href='http://localhost/knsms2024/mpesa.php'" required class="required" style="background-color: grey; padding:8px; color:#fff;">Deposit Now</button>
+        {{-- <input type="number" id="donated_amount" name="donated_amount" required class="required" > --}}
         </fieldset>
-        
         <div class="button-form1">
-            <button onclick="window.location.href='http://localhost/knsms2024/mpesa.php'" id="clearButton" style="margin-left: 250px">Deposit Now</button>
         <button id="clearButton">Clear All</button>
         <input type="submit" value="Submit">
         </div>

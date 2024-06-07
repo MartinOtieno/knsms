@@ -25,7 +25,7 @@ return new class extends Migration
             $table->string('company');
             $table->string('city');
             $table->string('phone_no');
-            $table->string('donated_amount');
+            // $table->string('donated_amount');
             $table->date('donated_date');
             $table->string('nationality');
             $table->string('occupation');

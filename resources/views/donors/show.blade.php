@@ -76,10 +76,10 @@ p {
                 <td>Company:</td>
                 <td>{{ $donor->company }}</td>
             </tr>
-            <tr>
+            {{-- <tr>
                 <td>Donated Amount:</td>
                 <td>ksh.{{ $donor->donated_amount }}</td>
-            </tr>
+            </tr> --}}
             <tr>
                 <td>Donated Date:</td>
                 <td>{{ $donor->donated_date }}</td>

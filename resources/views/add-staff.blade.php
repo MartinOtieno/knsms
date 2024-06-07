@@ -1,12 +1,5 @@
 <x-app-layout>
 <style>
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f0f0f0;
-    
-}
 .container {
     width: 80%;
     margin: 0 auto;
@@ -64,10 +57,16 @@ h2 {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+.add-staffs h1{
+    font-size: 20px;
+    text-decoration: underline;
+    font-weight: bold;
+    padding: 10px;
+}
 </style>
 <body>
     <div class="add-staffs">
-        <h2>Add Staff</h2>
+        <h1>Add Another Staff.</h1>
     <p class="mssg" style="color: green; font-size:30px;"> {{ session('mssg')}} </p>
     @if(Session::has('success'))
         <div class="alert-success" role="alert">

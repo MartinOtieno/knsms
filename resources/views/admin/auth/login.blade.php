@@ -1,11 +1,6 @@
 <x-guest-layout>
 
     <style>
-        /* .container {
-            display: flex;
-            flex-direction: column;
-            height: auto;
-        } */
         .header {
             display: flex;
             justify-content: space-between;
@@ -19,14 +14,7 @@
         h2.logo {
             margin: 0 auto;
         }
-        /* form {
-            width: 100%;
-            max-width: 500px;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            background-color: #f9f9f9;
-        } */
+        
         form > div {
             margin-bottom: 1rem;
         }

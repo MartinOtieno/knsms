@@ -6,6 +6,7 @@ use App\Http\Controllers\TestEnrollmentController;
 use App\Http\Controllers\DonorController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\StaffController;
+use App\Models\Donor;
 // use Illuminate\Console\Application;
 use Illuminate\Support\Facades\Route;
 
@@ -51,6 +52,7 @@ Route::get('/donors', [DonorController::class, 'index'])->name('donors.donate');
 Route::get('/donors/donate', [DonorController::class, 'donate'])->name('donors.index');
 Route::post('/donors', [DonorController::class, 'store']);
 Route::get('/donors/{id}', [DonorController::class, 'show']);
+Route::get('/donors/{id}', [DonorController::class, 'deleteDonor']);
 
 Route::get('/contact', [ContactController::class, 'index']);
 Route::get('/contact/create', [ContactController::class, 'create']);

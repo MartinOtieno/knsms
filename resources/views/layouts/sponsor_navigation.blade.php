@@ -20,10 +20,13 @@
                         {{ __('Dashboard') }}
                     </x-nav-link>
                     <x-nav-link :href="route('donors.index')" :active="request()->routeIs('dashboard')">
-                        {{ __('Contribute') }}
+                        {{ __('Contribute Now') }}
                     </x-nav-link>
                     <x-nav-link :href="('/contact/create')" :active="request()->routeIs('dashboard')">
                         {{ __('Contact Us') }}
+                    </x-nav-link>
+                    <x-nav-link :href="('/help')" :active="request()->routeIs('dashboard')">
+                        {{ __('Help') }}
                     </x-nav-link>
                 </div>
             </div>

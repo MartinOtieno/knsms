@@ -13,6 +13,10 @@
             </div>
         </div>
     </div>
+    <div id="hero1" class="d-flex align-items-center" style="margin-left: 250px;">
+        Message?
+        <p class="mssg" style="color: green; font-size:20px; margin-left:50px"> {{ session('mssg')}} </p>
+    </div>
     <section id="hero1" class="d-flex align-items-center">
         <div class="py-6">
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">

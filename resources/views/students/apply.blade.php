@@ -7,12 +7,11 @@
         <img src="/images/kibulogo.png" alt="logo" class="logo-form">
         <h1>Finance Assistant Applicaticon Form</h1>
         <fieldset class="details-group">
-        
         <div class="padding">
             <label for="name" >Enter First Name:</label>
-            <input type="text" id="first_name" name="first_name">
+            <input type="text" id="first_name" name="first_name" class="text">
             <label for="name">Enter Last Name:</label>
-            <input type="text" id="last_name" name="last_name">
+            <input type="text" id="last_name" name="last_name" class="text">
             <label for="name" >Enter Registration Number:</label>
             <input type="text" id="reg_no" name="reg_no" required><br>
             <label for="email">Email:</label>
@@ -36,7 +35,7 @@
             <input type="text" id="orphanage_status" name="orphanage_status" required>
             <label for="accountNumber" >Enter Account Number:</label>
             <input type="number" id="accountNumber" name="acct_no" required>
-            <label for="disability" style=" margin-right:5px;">Do you have any disability?:</label>
+            <label for="disability" style=" margin-right:5px;" class="text">Do you have any disability?:</label>
             <input type="radio" id="disabilityYes" name="disability" value="yes" onclick="toggleDisabilityInput()">
             <label for="disabilityYes" style="margin-right: 10px;">Yes</label>
             <input type="radio" id="disabilityNo" name="disability" value="no" onclick="toggleDisabilityInput()">
@@ -87,9 +86,7 @@
         var facultySelect = document.getElementById("faculties");
         var coursesSelect = document.getElementById("courses");
         var selectedFaculty = facultySelect.value;
-        coursesSelect.innerHTML = ""; // Clear previous options
-        
-        // Define courses based on selected faculty
+        coursesSelect.innerHTML = ""; 
         var courses = [];
         switch(selectedFaculty) {
             case "SCAI":
@@ -114,22 +111,17 @@
                 courses = [];
                 break;
         }
-        
-        // Populate courses select box with options
         for(var i = 0; i < courses.length; i++) {
             var option = document.createElement("option");
             option.text = courses[i];
             coursesSelect.add(option);
         }
     }
-
     function updateSemesters() {
         var yearSelect = document.getElementById("years");
         var semesterSelect = document.getElementById("semesters");
         var selectedYear = yearSelect.value;
-        semesterSelect.innerHTML = ""; // Clear previous options
-        
-        // Define semesters based on selected year
+        semesterSelect.innerHTML = ""; 
         var semesters = [];
         switch(selectedYear) {
             case "yearOne":
@@ -148,15 +140,12 @@
                 semesters = [];
                 break;
         }
-        
-        // Populate semesters select box with options
         for(var i = 0; i < semesters.length; i++) {
             var option = document.createElement("option");
             option.text = semesters[i];
             semesterSelect.add(option);
         }
     }
-
     function toggleDisabilityInput() {
     var disabilityInput = document.getElementById("disabilityInput");
     var disabilityYes = document.getElementById("disabilityYes");
@@ -177,6 +166,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
             });
         });
+document.getElementById("text").addEventListener("input", function() {
+  var inputValue = this.value;
+  var cleanValue = inputValue.replace(/[^A-Za-z]/g, '');
+  this.value = cleanValue;
+});
 </script>
 </section>
 </x-app-layout>

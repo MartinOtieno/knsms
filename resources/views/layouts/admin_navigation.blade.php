@@ -1,4 +1,69 @@
 <nav x-data="{ open: false }" class="bg-white border-b border-gray-100">
+    <style>
+        /* Navigation Menu */
+nav {
+    background-color: #fff;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+/* Logo */
+.logo {
+    margin-right: auto; /* Aligns logo to the left */
+}
+
+/* Navigation Links */
+.nav-link {
+    margin-right: 1.5rem; /* Adjust spacing between links */
+    color: #4a5568; /* Default link color */
+    text-decoration: none;
+    transition: color 0.2s ease-in-out; /* Smooth color transition on hover */
+}
+
+.nav-link:hover {
+    color: #4c51bf; /* Hover color */
+}
+
+/* Dropdown Menu */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none; /* Initially hidden */
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: 10; /* Ensure menu appears above other elements */
+    background-color: #fff;
+    border: 1px solid #e2e8f0;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block; /* Show menu on hover */
+}
+
+.dropdown-link {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: #4a5568;
+    text-decoration: none;
+}
+
+.dropdown-link:hover {
+    background-color: #edf2f7;
+}
+
+/* Responsive Styles */
+@media (max-width: 640px) {
+    .nav-link {
+        display: none;
+    }
+
+    .dropdown {
+        display: inline-block; /* Show dropdown as inline block */
+    }
+}
+    </style>
     <!-- Primary Navigation Menu -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
@@ -13,6 +78,9 @@
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link :href="('/')" :active="request()->routeIs('dashboard')">
+                        {{ __('Home') }}
+                    </x-nav-link>
                     <x-nav-link :href="route('admin.dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
@@ -25,21 +93,6 @@
                     <x-nav-link :href="route('staff-list.index')" :active="request()->routeIs('dashboard')">
                         {{ __('Staff List') }}
                     </x-nav-link>
-                    
-
-
-
-                    {{-- <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                        <nav id="navbar" class="navbar">
-                            <ul>
-                                <li><a href="/students" class="nav-link">Applications</a></li>
-                                <li><a href="/donors" class="nav-link">Contributions</a></li>
-                                <li><a href="/staff-list" class="nav-link">Staffs</a></li>
-                                <li><a href="/help" class="nav-link">Help</a></li>
-                            </ul>
-                        </nav>
-                    </div> --}}
-                    
                 </div>
             </div>
             <!-- Settings Dropdown -->
@@ -104,10 +157,7 @@
             </div> --}}
 
             <div class="mt-3 space-y-1">
-                {{-- <x-responsive-nav-link :href="route('profile.edit')">
-                    {{ __('Profile') }}
-                </x-responsive-nav-link> --}}
-
+            
                 <!-- Authentication -->
                 <form method="POST" action="{{ route('admin.logout') }}">
                     @csrf

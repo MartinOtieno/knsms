@@ -138,7 +138,7 @@ h2 {
     </style>
     
 {{-- <h1>The students who have made their Applications<br> for the financial support</h1> --}}
-<div class="wrapper student-index" style="margin-top: 150px">
+<div class="wrapper student-index" style="margin-top: 80px">
     
     <form action="" class="text-center">
         <img src="/images/kibulogo.png" alt="logo" style="width: 60px; margin-left:550px;">
@@ -189,8 +189,8 @@ h2 {
                         @endif
                     </td>
                     <td class="action-buttons">
-                        <a href="/students/{{ $student->id }}" class="btn btn-primary">Details</a>
                         <a class="btn btn-success" href="{{url('approve_student',$student->id)}}" style="background-color: green;">Approve</a>
+                        <a href="/students/{{ $student->id }}" class="btn btn-primary">View</a>
                         <a class="btn btn-warning"href="{{url('reject_student',$student->id)}}" style="background-color: red;">Reject</a>
                     </td>
                 </tr>
@@ -199,7 +199,7 @@ h2 {
         </table>
     </form>
 </div>
-<p><a href="('/')" style="margin: 100px; margin-top:100px;">Go Back Home</a></p>
+<p><a href="('/')" style="margin: 100px; margin-top:100px; color:#007bff;"><-Go Back Home</a></p>
 </x-app-layout>
 
 

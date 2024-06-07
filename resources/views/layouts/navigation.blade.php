@@ -20,10 +20,14 @@
                         {{ __('Dashboard') }}
                     </x-nav-link>
                     <x-nav-link :href="route('students.apply')" :active="request()->routeIs('dashboard')">
-                        {{ __('Apply') }}
+                        {{ __('Apply Now') }}
                     </x-nav-link>
                     <x-nav-link :href="('/contact/create')" :active="request()->routeIs('dashboard')">
                         {{ __('Contact Us') }}
+                    </x-nav-link>
+
+                    <x-nav-link :href="('/help')" :active="request()->routeIs('dashboard')">
+                        {{ __('Help') }}
                     </x-nav-link>
                 </div>
             </div>

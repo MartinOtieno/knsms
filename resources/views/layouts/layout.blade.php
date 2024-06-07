@@ -31,7 +31,7 @@
 <body class="antialiased">
   <header id="header" class="fixed-top ">
     <div class="container d-flex align-items-center">
-      <h1 class="logo me-auto"><a href="('/')"> <img src="/images/kibulogo.png" alt="logo" style="width: 75px;"></a></h1>
+      <h1 class="logo me-auto"><a href="/"> <img src="/images/kibulogo.png" alt="logo" style="width: 75px;"></a></h1>
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-links-active" href="/">Home</a></li>

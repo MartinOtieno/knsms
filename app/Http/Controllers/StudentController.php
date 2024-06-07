@@ -26,53 +26,34 @@ class StudentController extends Controller
         return view('students.apply');
     }
 
-    public function store(Request $request)
-{
-    $request->validate([
-        'first_name' => 'required',
-        'last_name' => 'required',
-        'reg_no' => 'required|unique:students',
-        'gender' => 'required',
-        'email' => 'required|email|unique:students',
-        'phone_no' => 'required',
-        'address' => 'required',
-        'city' => 'required',
-        'date_of_birth' => 'required|date',
-        'orphanage_status' => 'required',
-        'disability' => 'required',
-        'faculty' => 'required',
-        'course' => 'required',
-        'year_of_study' => 'required',
-        'semester' => 'required',
-        'transcript' => 'required',
-        'acct_no' => 'required',
-    ]);
+    public function store(){
 
-    $student = new Student();
+        $student = new Student();
 
-    $student->first_name = $request->input('first_name');
-    $student->last_name = $request->input('last_name');
-    $student->reg_no = $request->input('reg_no');
-    $student->gender = $request->input('gender');
-    $student->email = $request->input('email');
-    $student->phone_no = $request->input('phone_no');
-    $student->address = $request->input('address');
-    $student->city = $request->input('city');
-    $student->date_of_birth = $request->input('date_of_birth');
-    $student->orphanage_status = $request->input('orphanage_status');
-    $student->disability = $request->input('disability');
-    $student->faculty = $request->input('faculty');
-    $student->course = $request->input('course');
-    $student->year_of_study = $request->input('year_of_study');
-    $student->semester = $request->input('semester');
-    $student->transcript = $request->input('transcript');
-    $student->acct_no = $request->input('acct_no');
+        $student ->first_name = request('first_name');
+        $student ->last_name = request('last_name');
+        $student ->reg_no = request('reg_no');
+        $student ->gender = request('gender');
+        $student ->email = request('email');
+        $student ->phone_no = request('phone_no');
+        $student ->address = request('address');
+        $student ->city = request('city');
+        $student ->date_of_birth = request('date_of_birth');
+        $student ->orphanage_status = request('orphanage_status');
+        $student ->disability = request('disability');
+        $student ->faculty = request('faculty');
+        $student ->course = request('course');
+        $student ->year_of_study = request('year_of_study');
+        $student ->semester = request('semester');
+        $student ->transcript = request('transcript');
+        // $student ->fin_stmt = request('fin_stmt');
+        $student ->acct_no = request('acct_no');
 
-    $student->save();
-
-    return redirect('/dashboard')->with('mssg', 'You have completed your application!<br> Wait for approval');
-}
-
+        $student->save();
+         
+        return redirect(route('dashboard'))->with('mssg', 'You have completed your Application!');
+    }
+    
     public function destroy ($id){
         $student = Student::findOrFail($id);
         $student->delete();
@@ -100,13 +81,13 @@ class StudentController extends Controller
         return redirect()->back();
     }
 
-    public function search($id)
-{
-    $search = request('search'); // Using helper function to retrieve input
-    $students = Student::where('first_name', 'like', '%' . $search . '%')->get();
+//     public function search($id)
+// {
+//     $search = request('search'); // Using helper function to retrieve input
+//     $students = Student::where('first_name', 'like', '%' . $search . '%')->get();
 
-    return view('students.index', compact('students'));
-}
+//     return view('students.index', compact('students'));
+// }
 
     
 } 

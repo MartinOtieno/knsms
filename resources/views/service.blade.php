@@ -1,9 +1,11 @@
 @extends('layouts.layout')
+
+@section('content')
 <style>
   .section-title {
     text-align: center;
     /* margin-bottom: 30px; */
-    margin-top: 40px
+    margin-top: 100px
 }
 
 .section-title h2 {
@@ -24,7 +26,7 @@
   margin-right: 80px;
 }
 </style>
-@section('content')
+
 <link rel="stylesheet" href="main.css">
 <section id="services" class="services section-bg">
 <div class="container" data-aos="fade-up">
@@ -62,5 +64,16 @@
     </div>
   </div>
 </div>
+{{-- <div class="team">
+  <h4><a href="">Our Team</a></h4>
+  <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="400">
+    <div class="icon-box">
+      <div class="icon"><i class='bx bxs-user-detail'></i></div>
+
+      <p>The progress of the student who applied will be monitored.</p>
+    </div>
+  </div>
+</div>
+</div> --}}
 </section>
 @endsection

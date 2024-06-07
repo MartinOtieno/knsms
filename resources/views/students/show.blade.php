@@ -109,10 +109,9 @@
             </tr>
         </tbody>
     </table>
-    <a href="/students" class="back"><- Back to student list</a>
+    <a href="/students" class="back2" style="margin: 100px; margin-top:100px; color:#007bff;"><- Back to student list</a>
     <!-- <form action="/students/{{ $student->id}}" method="DETELE">
-        @csrf
-        @method('DELETE')
+        
         <button>Delete</button>
     </form> -->
 </div>
