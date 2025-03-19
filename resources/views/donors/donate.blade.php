@@ -41,7 +41,7 @@
         <label for="donated_date">Enter Date of Donation:</label>
         <input type="date" id="donated_date" name="donated_date" required class="required"><br>
         <label for="donated_amount">Enter the Amount:</label>
-        <button onclick="window.location.href='http://localhost/knsms2024/mpesa.php'" required class="required" style="background-color: grey; padding:8px; color:#fff;">Deposit Now</button>
+        <button onclick="window.location.href='http://localhost/knsms/mpesa.php'" required class="required" style="background-color: grey; padding:8px; color:#fff;">Deposit Now</button>
         {{-- <input type="number" id="donated_amount" name="donated_amount" required class="required" > --}}
         </fieldset>
         <div class="button-form1">
